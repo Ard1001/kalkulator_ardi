@@ -25,12 +25,16 @@ for(let i = 0; i < tombol.length; i++){
             if(operasi === "/") input.value = parseInt(angkaPertama) / parseInt(angkaKedua);
         } 
         else {
-            const currentValue = parseInt(input.value);
+        const currentValue = parseInt(input.value);
         if(currentValue === 0) {
             input.value = tombol[i].innerText
-        } else {
+        } else if(angkaKedua > 0 ){
+            input.value = tombol[i].innerText;
+        } 
+        else {
             input.value = currentValue + tombol[i].innerText
         }
+        
         }
         
     })
